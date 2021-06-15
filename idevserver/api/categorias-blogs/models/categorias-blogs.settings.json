@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorias_blogs",
+  "info": {
+    "name": "Categorias Blogs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NombreCategoria": {
+      "type": "string",
+      "required": true
+    },
+    "categoria_blogs": {
+      "via": "Categoria",
+      "model": "blogs"
+    }
+  }
+}
