@@ -1,73 +1,114 @@
-import React, { useState,useEffect } from "react";
-import { Layout } from "antd";
+import React, { useState, useEffect } from "react";
 import { Menu } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
-const { SubMenu } = Menu;
 import Link from "next/link";
 import useWindowSize from "../../hooks/useWindowSize";
-
-
 import {
   MailOutlined,
   AppstoreOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
 
+const { SubMenu } = Menu;
+
 export default function Header() {
   const [click, setClick] = useState(false);
   const [navbar, setNavbar] = useState(false);
-  const { width, height } = useWindowSize();
-
-
-  const state = {
-    current: "mail",
-  };
-  const { Header } = Layout;
-  const { current } = state;
 
   const handleClick = () => setClick(!click);
-  const closeMobileMenu = () =>setClick(false);
+  const closeMobileMenu = () => setClick(false);
 
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackground);
+    return () => window.removeEventListener("scroll", changeBackground);
+  }, []);
 
- useEffect(() => {
-   window.addEventListener("scroll",changeBackground)
-   return ()=> window.removeEventListener("scroll", changeBackground)
- }, [])
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
 
-const changeBackground=()=>{
-  if(window.scrollY>=80){
-    setNavbar(true);
-  }else{
-    setNavbar(false);
-  }
-}
- 
   return (
     <>
       <nav className={navbar ? "navbar active" : "navbar"}>
         <div className="navbar-container">
           <Link href="/#" className="navbar-logo">
-            Idev
+            <img class="navbar__logo" src="images/logo.png"></img>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <FontAwesomeIcon icon={click ? faTimes : faBars}></FontAwesomeIcon>
           </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <div className={click ? "nav-menu active" : "nav-menu"}>
+            <ul className="nav-menu__ul">
+              <li class="sub-menu-parent" tab-index="0">
+                <Link href="http://google.com">Home</Link>
+              </li>
+              <li class="sub-menu-parent" tab-index="0">
+                <Link href="http://google.com">Resume</Link>
+              </li>
+              <li class="sub-menu-parent" tab-index="0">
+                <Link href="http://google.com">Service</Link>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="#">Sub Item 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub Item 2</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub Item 3</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub Item 4</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sub-menu-parent" tab-index="0">
+                <a href="#">Portafolio</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="#">Sub Item 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub Item 2</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub Item 3</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub Item 4</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub Item 5</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub Item 6</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sub-menu-parent" tab-index="0">
+                <a href="#">Blogs</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="#">Sub Item 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Sub Item 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sub-menu-parent" tab-index="0">
+                <Link href="http://google.com">Contact</Link>
+              </li>
+              <li>
 
-            <li className='nav-item'>
-              <Link href='/#' className='nav-links' onClick={closeMobileMenu}>Home</Link>
-            </li>
-            <li className='nav-item'>
-              <Link href='/services' className='nav-links' onClick={closeMobileMenu}>Services</Link>
-            </li>
-            <li className='nav-item'>
-              <Link href='/products' className='nav-links' onClick={closeMobileMenu}>Products</Link>
-            </li>
-            <li className='nav-item'>
-              <Link href='/sign-up' className='nav-links-' onClick={closeMobileMenu}>Sign Up</Link>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </>
