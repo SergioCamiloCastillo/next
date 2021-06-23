@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Menu } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
-import useWindowSize from "../../hooks/useWindowSize";
 import {
-  MailOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
+  faSearch,
+  faTimes,
+  faBars,
+  faCode,
+} from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const { SubMenu } = Menu;
 
@@ -104,8 +103,12 @@ export default function Header() {
               <li class="sub-menu-parent" tab-index="0">
                 <Link href="http://google.com">Contact</Link>
               </li>
-              <li>
-
+              <li className={navbar ? "button-quote active" : "button-quote"}>
+                <FontAwesomeIcon
+                className='vertical-center'
+                  icon={faCode}
+                ></FontAwesomeIcon>
+                <Link href="#">Consigue una cotización</Link>
               </li>
             </ul>
           </div>

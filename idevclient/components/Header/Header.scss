@@ -1,5 +1,5 @@
 .navbar {
-  background: #1e99a6;
+  background: #151c4c;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -8,14 +8,28 @@
   position: sticky;
   top: 0;
   z-index: 999;
-  transition: 0.8s;
+  transition: 0.5s;
   &__logo {
     width: 200px;
   }
-}
-.navbar.active {
-  background-color: #e1f3f5;
-  transition: 0.8s;
+  &.active {
+    background-color: #fff;
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+    .sub-menu{
+      border-top: 2px solid #151c4c;
+      &a:hover{
+        color:#fff!important;
+      }
+    }
+    .sub-menu-parent a:hover:first-child{
+      transition: 0.8s;
+      color:#647589;
+    }
+    
+
+  }
 }
 .sub-menu-parent {
   position: relative;
@@ -26,7 +40,7 @@
   opacity: 0;
   position: absolute;
   top: 60px;
-  border-top: 2px solid #1e99a6;
+  border-top: 2px solid #fff;
   background: white;
   left: 0;
   width: 240px;
@@ -35,25 +49,28 @@
   z-index: -1;
   transition: all 0.5s ease-in-out 0s, visibility 0s linear 0.5s,
     z-index 0s linear 0.01s;
-}
-.sub-menu a{
-  color: #8a5b5b!important;
+    &:hover a{
+      color:#fff;
+    }
+    a {
+      color: #647589 !important;
 
-}
-.sub-menu li:hover a{
-  color:white!important;
+    }
+    li:hover a {
+      color: white !important;
+    }
+    li {
+      border-bottom: 1px solid #e8e8e8;
+      transition: 0.8s;
+    }
+    li:hover {
+      background-color: #151c4c;
+      transition: all linear 0.5s;
+      -webkit-transition: all linear 0.5s;
+      color: white;
+    }
 }
 
-.sub-menu li{
-  border-bottom: 1px solid #e8e8e8;
-  transition: 0.8s;
-}
-.sub-menu li:hover {
-  background-color: #1e99a6;
-  transition: all linear 0.5s;
-  -webkit-transition: all linear 0.5s;
-  color:white;
-}
 .sub-menu-parent:focus .sub-menu,
 .sub-menu-parent:focus-within .sub-menu,
 .sub-menu-parent:hover .sub-menu {
@@ -65,13 +82,16 @@
 }
 
 nav a {
-  color: white;
+  color: #647589;
   display: block;
   padding: 0.5em 1em;
   text-decoration: none;
+  transition: 0.5s;
 }
 nav a:hover {
-  color: #f0700b;
+  color: #ffffff;
+  font-weight: 500;
+  transition: 0.5s;
 }
 nav ul,
 nav ul li {
@@ -91,7 +111,57 @@ nav > ul > li {
 nav > ul > li:first-child {
   border-left: none;
 }
+.button-quote {
+  background-color: white;
+  color: #151c4c;
+  border-radius: 60px;
+  display: inline-flex;
+  padding: 0px 0px 0px 15px;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  a {
+    margin-left: 12px;
+    color: #151c4c;
+    &:hover {
+      color: #151c4c;
+    }
+  }
+  svg {
+    color: #151c4c;
+  }
+  &:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    color: #151c4c !important;
+  }
+}
+.button-quote.active {
+  background-color: #151c4c;
+  color: #ffffff;
+  border-radius: 60px;
+  display: inline-flex;
+  padding: 0px 0px 0px 15px;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -webkit-box-shadow: 0px 25px 60px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 25px 60px 0px rgba(0, 0, 0, 0.1);
 
+  a {
+    margin-left: 12px;
+    color: #ffffff;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  svg {
+    color: #ffffff;
+  }
+  &:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    color: #ffffff !important;
+  }
+}
 .navbar-container {
   display: flex;
   justify-content: center;
@@ -130,7 +200,7 @@ nav > ul > li:first-child {
 }
 
 @media screen and (max-width: 960px) {
-  .nav-menu__ul{
+  .nav-menu__ul {
     display: block;
   }
   .NavbarItems {
