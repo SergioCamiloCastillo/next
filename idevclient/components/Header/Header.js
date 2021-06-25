@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Menu } from "antd";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { FontAwesomeIcon  } from "@fortawesome/react-fontawesome";
 import {
-  faSearch,
+  
   faTimes,
   faBars,
   faCode,
@@ -33,12 +34,14 @@ export default function Header() {
 
   return (
     <>
+    
       <nav className={navbar ? "navbar active" : "navbar"}>
-        <div className="navbar-container">
+        <div className="navbar-container container">
           <Link href="/#" className="navbar-logo">
-            <img class="navbar__logo" src="images/logo.png"></img>
+            <img class="navbar__logo" src="images/logooscuro.png"></img>
           </Link>
-          <div className="menu-icon" onClick={handleClick}>
+          <div className='spacing-80'></div>
+          <div className="menu-icon vertical-center" onClick={handleClick}>
             <FontAwesomeIcon icon={click ? faTimes : faBars}></FontAwesomeIcon>
           </div>
           <div className={click ? "nav-menu active" : "nav-menu"}>
@@ -50,7 +53,7 @@ export default function Header() {
                 <Link href="http://google.com">Resume</Link>
               </li>
               <li class="sub-menu-parent" tab-index="0">
-                <Link href="http://google.com">Service</Link>
+                <Link href="http://google.com">Service </Link>
                 <ul class="sub-menu">
                   <li>
                     <a href="#">Sub Item 1</a>
@@ -103,13 +106,7 @@ export default function Header() {
               <li class="sub-menu-parent" tab-index="0">
                 <Link href="http://google.com">Contact</Link>
               </li>
-              <li className={navbar ? "button-quote active" : "button-quote"}>
-                <FontAwesomeIcon
-                className='vertical-center'
-                  icon={faCode}
-                ></FontAwesomeIcon>
-                <Link href="#">Consigue una cotización</Link>
-              </li>
+              
             </ul>
           </div>
         </div>
