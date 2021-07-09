@@ -3,11 +3,19 @@ import "../components/Header/Header.scss";
 import 'antd/dist/antd.css';
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
+import { Carousel } from 'antd';
+
+const Noop = ({ children }) => <>{children}</>;
+
 import Layout from "../Layout";
 function MyApp({ Component, pageProps }) {
+  const ContextProvider = Component.provider || Noop;
+
   return (
     <Layout>
-      <Component {...pageProps} />
+      <ContextProvider><Component {...pageProps} />
+      </ContextProvider>
+
     </Layout>
   );
 }

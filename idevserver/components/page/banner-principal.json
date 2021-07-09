@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_page_banner_principals",
+  "info": {
+    "name": "Banner Principal",
+    "icon": "bullhorn"
+  },
+  "options": {},
+  "attributes": {
+    "Titulo_Banner": {
+      "type": "string",
+      "required": true
+    },
+    "Descripcion": {
+      "type": "richtext"
+    },
+    "Imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Status_Activo": {
+      "type": "boolean"
+    },
+    "Titulo_Boton": {
+      "type": "string"
+    },
+    "Enlace": {
+      "type": "string"
+    }
+  }
+}

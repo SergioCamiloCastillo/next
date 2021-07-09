@@ -37,24 +37,22 @@ export default function Header() {
     
       <nav className={navbar ? "navbar active" : "navbar"}>
         <div className="navbar-container container">
-          <Link href="/#" className="navbar-logo">
-            <img class="navbar__logo" src="images/logooscuro.png"></img>
-          </Link>
+         
           <div className='spacing-80'></div>
           <div className="menu-icon vertical-center" onClick={handleClick}>
             <FontAwesomeIcon icon={click ? faTimes : faBars}></FontAwesomeIcon>
           </div>
           <div className={click ? "nav-menu active" : "nav-menu"}>
             <ul className="nav-menu__ul">
-              <li class="sub-menu-parent" tab-index="0">
+              <li className="sub-menu-parent" tab-index="0">
                 <Link href="http://google.com">Home</Link>
               </li>
-              <li class="sub-menu-parent" tab-index="0">
+              <li className="sub-menu-parent" tab-index="0">
                 <Link href="http://google.com">Resume</Link>
               </li>
-              <li class="sub-menu-parent" tab-index="0">
+              <li className="sub-menu-parent" tab-index="0">
                 <Link href="http://google.com">Service </Link>
-                <ul class="sub-menu">
+                <ul className="sub-menu">
                   <li>
                     <a href="#">Sub Item 1</a>
                   </li>
@@ -69,9 +67,9 @@ export default function Header() {
                   </li>
                 </ul>
               </li>
-              <li class="sub-menu-parent" tab-index="0">
+              <li className="sub-menu-parent" tab-index="0">
                 <a href="#">Portafolio</a>
-                <ul class="sub-menu">
+                <ul className="sub-menu">
                   <li>
                     <a href="#">Sub Item 1</a>
                   </li>
@@ -92,9 +90,9 @@ export default function Header() {
                   </li>
                 </ul>
               </li>
-              <li class="sub-menu-parent" tab-index="0">
+              <li className="sub-menu-parent" tab-index="0">
                 <a href="#">Blogs</a>
-                <ul class="sub-menu">
+                <ul className="sub-menu">
                   <li>
                     <a href="#">Sub Item 1</a>
                   </li>
@@ -103,7 +101,7 @@ export default function Header() {
                   </li>
                 </ul>
               </li>
-              <li class="sub-menu-parent" tab-index="0">
+              <li className="sub-menu-parent" tab-index="0">
                 <Link href="http://google.com">Contact</Link>
               </li>
               
