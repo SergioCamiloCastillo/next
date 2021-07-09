@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 
 import CarrouselBanner from "./CarrouselBanner";
 const Homepage = (data) => {
-    console.log(data);
+   
     return (
         <>
             <div>

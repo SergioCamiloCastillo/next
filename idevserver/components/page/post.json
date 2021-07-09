@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_page_posts",
+  "info": {
+    "name": "Post",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "Titulo_Blog": {
+      "type": "string"
+    }
+  }
+}

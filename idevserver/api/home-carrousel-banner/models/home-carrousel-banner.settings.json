@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_carrousel_banners",
+  "info": {
+    "name": "HomeCarrouselBanner"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TituloBanner": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "richtext"
+    },
+    "Imagen": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "StatusActivo": {
+      "type": "boolean"
+    },
+    "TituloBoton": {
+      "type": "string"
+    },
+    "Enlace": {
+      "type": "string"
+    }
+  }
+}

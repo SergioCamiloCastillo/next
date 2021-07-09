@@ -13,8 +13,8 @@ const CarrouselBanner = ({ data }) => {
         const arrayMenu = [];
         arrayMenu.push(data.Titulo_Banner);
         setCarrousel(arrayMenu)
-    }, [carrousel]);
-    console.log(carrousel);
+    }, []);
+    console.log(data);
     return (
         <>
             <Carousel >
