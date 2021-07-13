@@ -1,15 +1,11 @@
 import { useState, useEffect } from "react";
-
-
+/* URL ESTATICA */
+import { BASE_PATH } from "../utils/constants";
 /*Context*/
 import AppContext from "../context/AppContext";
 
-/*const initialState = {
-    data:[],
-};*/
 
-
-const API_FAKE = "http://localhost:1337/home-carrousel-banners";
+const API = `${BASE_PATH}/home-carrousel-banners`;
 
 function ContextWrapper({ children }) {
     const [state, setState] = useState([]);
@@ -19,12 +15,12 @@ function ContextWrapper({ children }) {
     useEffect(async () => {
 
         /*Get data*/
-        const response = await fetch(API_FAKE);
+        const response = await fetch(API);
         const json = await response.json();
         setState(json);
 
 
-        const response3 = await fetch(API_FAKE);
+        const response3 = await fetch(API);
         const json3 = await response3.json();
         setPosts(json3);
 

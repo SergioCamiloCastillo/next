@@ -6,11 +6,13 @@ import AppContext from "../context/AppContext";
 /*Containers*/
 import HomeContainer from "@/containers/HomeContainer";
 
+
 const Home = () => {
   const { state } = useContext(AppContext);
 
   return (
     <HomeContainer data={state} />
+
   )
 }
 

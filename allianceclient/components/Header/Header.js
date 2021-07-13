@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { Menu } from "antd";
+import Image from 'next/image'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars, faCode } from "@fortawesome/free-solid-svg-icons";
@@ -32,6 +33,9 @@ export default function Header() {
       <nav className={navbar ? "navbar active" : "navbar"}>
         <div className="navbar-container container">
           <div className="spacing-80"></div>
+          <Link href="/#" className="navbar-logo">
+            <Image width={80} height={60} class="navbar__logo" src="/images/logooscuro.png" />
+          </Link>
           <div className="menu-icon vertical-center" onClick={handleClick}>
             <FontAwesomeIcon icon={click ? faTimes : faBars}></FontAwesomeIcon>
           </div>

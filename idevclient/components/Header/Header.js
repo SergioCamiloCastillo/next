@@ -37,7 +37,9 @@ export default function Header() {
     
       <nav className={navbar ? "navbar active" : "navbar"}>
         <div className="navbar-container container">
-         
+          <Link>
+            <Image src="/"></Image>
+          </Link>
           <div className='spacing-80'></div>
           <div className="menu-icon vertical-center" onClick={handleClick}>
             <FontAwesomeIcon icon={click ? faTimes : faBars}></FontAwesomeIcon>

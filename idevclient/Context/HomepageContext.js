@@ -4,12 +4,13 @@
 import { createContext, useContext, useState, useEffect } from "react";
 
 const Context = createContext({});
+import { BASE_PATH } from "../../utils/constants";
 
 
 export const CountProvider = ({ children }) => {
     const [data, setData] = useState(null);
     useEffect(() => {
-        fetch("http://localhost:1337/homepage").then(response => response.json()).then(
+        fetch(`${BASE_PATH}/homepage`).then(response => response.json()).then(
             result => setData(result)
         )
     }, [setData]);

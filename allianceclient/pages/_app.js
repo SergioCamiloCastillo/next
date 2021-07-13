@@ -1,16 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Head from "next/head";
+import "../scss/globals.scss";
+
 
 /*Context*/
 import ContextWrapper from "../components/ContextWrapper";
+
 
 /*Components*/
 import Layout from "@/components/Layout";
 
 /*Styles*/
 import "../styles/globals.css";
-import "../components/Header/Header.scss";
 import 'antd/dist/antd.css';
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
