@@ -24,7 +24,6 @@
     "swiper": "^6.7.5"
   },
   "devDependencies": {
-    "node-sass": "^6.0.0",
     "prettier": "^2.3.2"
   }
 }

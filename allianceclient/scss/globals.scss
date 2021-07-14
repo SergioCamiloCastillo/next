@@ -1,4 +1,5 @@
 @import "../scss/index.scss";
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700&display=swap');
 * {
   box-sizing: border-box;
@@ -21,7 +22,7 @@
   margin-right: auto;
   margin-left: auto;
   justify-content: space-between;
-
+  max-width: 1200px;
 
 }
 .spacing-80{
