@@ -1,35 +1,72 @@
+.banner-anim-thumb-default {
+  top: 80%;
+}
 
-.swiper-container {
-    width: 100%;
-    height: 100%;
-  }
-  .swiper-slide-active{
-    display: grid!important;
-    width: 100%!important;
-  }
- 
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-<<<<<<< HEAD
-    filter: brightness(50%);
-=======
-    filter:brightness(40%);
-    height:700px;
->>>>>>> 5f73dc8cf39e3dfac60ec0a4cf7919257259cb0b
-  }
- 
-  .image-banner{
-    width: 100%!important;
-    height: 100%!important;  }
-    .carousel{
-      &__title{
-        color: #fff;
-        font-size: 75px;
-        line-height: 85px;
-        top:26%;
-        position: absolute;
-      }
-    }
+.image-banner {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.title-carousel {
+  color: #fff;
+  font-size: 75px;
+  line-height: 85px;
+
+  position: absolute !important;
+  margin-top: 11%;
+
+}
+
+.description-carousel {
+  color: #fff;
+  font-size: 45px;
+  line-height: 85px;
+
+  position: absolute !important;
+  margin-top: 19%;
+
+}
+
+
+
+.banner-user-elem {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-anim {
+  position: inherit !important;
+}
+
+
+.banner-anim-elem .bg {
+  height: calc(100% + 200px);
+  top: -100px;
+  transform: translateY(-100px);
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-anim-elem .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  filter: brightness(50%);
+  left: 0;
+  overflow: hidden;
+  height: 700px!important;
+}
+
+.banner-anim-elem.banner-user-elem {
+  color: #fff;
+}
+
+.banner-anim-elem {
+  height: 100%;
+}
+
+.banner-anim-elem.banner-user-elem {
+  color: #fff;
+}

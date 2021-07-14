@@ -1,56 +1,63 @@
 import React, { Fragment } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { BASE_PATH } from "../../utils/constants";
+import { Animated } from "react-animated-css";
+import BannerAnim, { Element } from 'rc-banner-anim';
+import TweenOne from 'rc-tween-one';
+import QueueAnim from 'rc-queue-anim';
+
+const BgElement = Element.BgElement;
 
 import Image from 'next/image'
 import SwiperCore, {
-    Navigation,
-    EffectFade, Autoplay, Parallax, Pagination
+  Navigation,
+  EffectFade, Autoplay, Parallax, Pagination
 } from 'swiper/core';
 SwiperCore.use([Navigation, EffectFade, Autoplay, Parallax, Pagination]);
 
 /*Styles*/
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
-import "swiper/components/effect-fade/effect-fade.min.css";
 import "swiper/components/pagination/pagination.min.css";
 
 const CarrouselBanner = ({ items }) => {
-  
-    return (
-        <Fragment>
-            <Swiper speed={900} lazy={true} autoplay={{
-                "delay": 18000,
-                "disableOnInteraction": false
-            }}  effect={'fade'} navigation={true} slidesPerView={1} spaceBetween={90} loop={true} className="mySwiper">
 
-                {
-                    items ?
-                        items.map((component, index) => (
-                            <SwiperSlide>
-                                <Image width={1600}
-                                    height="1000" src={`${BASE_PATH}${component.Imagen[0].url}`} />
-                                <div className='container'>
-                                    <div className='carousel__title'>{component.TituloBanner}</div>
+  return (
+    <Fragment>
 
-<<<<<<< HEAD
-                            <SwiperSlide><div><Image width={1600}
-                                height="1000" src={`${BASE_PATH}${component.Imagen[0].url}`} />
-                                <p>{component.TituloBanner}</p></div>
-=======
-                                </div>
->>>>>>> 5f73dc8cf39e3dfac60ec0a4cf7919257259cb0b
-                            </SwiperSlide>
+      <BannerAnim thumbFloat={false} prefixCls="banner-thumb-bottom" duration={900}>
+
+        {
+          items ?
+            items.map((component, index) => (
+              <Element key="aaa"
+                prefixCls="banner-user-elem"
+              >
+                <BgElement
+                  key="bg"
+                  className="bg"
+                  style={{
+                    backgroundImage: `url(http://localhost:1337${component.Imagen[0].url})`,
+                  }}
+                  scrollParallax={{ y: 100 }}
+                />
+                <TweenOne className='title-carousel' animation={{ y: 90, opacity: 0, type: 'from', delay: 300 }} name="TweenOne">
+                  {component.TituloBanner}
+                </TweenOne>
+                <TweenOne className='description-carousel' animation={{ y: 50, opacity: 0, type: 'from', delay: 900 }} name="TweenOne2">
+                  {component.Descripcion}
+                </TweenOne>
+              </Element>
 
 
 
-                        ))
-                        : 'Cargando...'
-                }
-            </Swiper>
 
-        </Fragment>
-    );
+            ))
+            : 'Cargando...'
+        }
+      </BannerAnim>
+    </Fragment>
+  );
 };
 
 export default CarrouselBanner;

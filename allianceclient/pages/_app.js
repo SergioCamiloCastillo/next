@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../scss/globals.scss";
-
+import '../scss/animate.css';
 
 /*Context*/
 import ContextWrapper from "../components/ContextWrapper";
@@ -14,8 +14,10 @@ import Layout from "@/components/Layout";
 import "../styles/globals.css";
 import 'antd/dist/antd.css';
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import 'rc-banner-anim/assets/index.css';
 
 export default function MyApp(props) {
+
   const { Component, pageProps } = props;
 
   return (
