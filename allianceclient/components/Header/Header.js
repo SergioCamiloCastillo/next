@@ -34,7 +34,7 @@ export default function Header() {
         <div className="navbar-container container">
           <div className="spacing-80"></div>
           <Link href="/#" className="navbar-logo">
-            <Image width={80} height={60} class="navbar__logo" src="/images/logooscuro.png" />
+            <Image width={80} height={60} className="navbar__logo" src="/images/logooscuro.png" />
           </Link>
           <div className="menu-icon vertical-center" onClick={handleClick}>
             <FontAwesomeIcon icon={click ? faTimes : faBars}></FontAwesomeIcon>

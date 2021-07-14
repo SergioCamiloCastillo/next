@@ -15,20 +15,21 @@ import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/effect-fade/effect-fade.min.css";
 
 const CarrouselBanner = ({ items }) => {
-
+  
     return (
         <Fragment>
             <Swiper autoplay={{
                 "delay": 18000,
                 "disableOnInteraction": false
-            }} setTranslate={8000} effect={'fade'} navigation={true} slidesPerView={1} spaceBetween={90} loop={true} className="mySwiper">
+            }}  effect={'fade'} navigation={true} slidesPerView={1} spaceBetween={90} loop={true} className="mySwiper">
 
                 {
                     items ?
                         items.map((component, index) => (
 
-                            <SwiperSlide><Image width={1600}
+                            <SwiperSlide><div><Image width={1600}
                                 height="1000" src={`${BASE_PATH}${component.Imagen[0].url}`} />
+                                <p>{component.TituloBanner}</p></div>
                             </SwiperSlide>
 
                         ))

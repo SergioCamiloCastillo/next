@@ -14,7 +14,7 @@ export default function Layout({ children }) {
          <title>Alliance Code</title>
        </Head>
       <HeaderComponent />
-      <div class='content'>{children}</div>
+      <div className='content'>{children}</div>
 
       <FooterComponent />
     </Fragment>

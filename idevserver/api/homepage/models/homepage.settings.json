@@ -11,13 +11,5 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {
-    "body": {
-      "type": "dynamiczone",
-      "components": [
-        "page.banner-principal",
-        "page.post"
-      ]
-    }
-  }
+  "attributes": {}
 }
