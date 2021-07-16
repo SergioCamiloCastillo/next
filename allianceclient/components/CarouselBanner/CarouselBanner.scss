@@ -22,10 +22,22 @@
       text-transform: uppercase;
       letter-spacing: 1.3px;
        transition: 1.1s!important;
-      &:hover{
-        background-color: #151c4c!important;
-        transition: 1.1s!important;
-      }
+       z-index:999;
+       color: #fff!important;
+       background: {
+         image: linear-gradient(45deg,#151c4c 50%, transparent 50%)!important;
+         position: 100%!important;
+         size: 400%!important;
+    
+       }
+       transition: background 1000ms ease-in-out!important;
+       
+       &:hover {
+         background-position: 0!important;
+         z-index:999;
+       }
+
+    
   }
   &__description{
     min-width: 930px;
@@ -73,7 +85,7 @@
   top: 0;
   left: 0;
   overflow: hidden;
-  filter: brightness(50%);
+  filter: brightness(30%);
 }
 .banner-anim-arrow-default{
   background: none!important;

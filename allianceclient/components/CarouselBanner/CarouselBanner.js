@@ -1,10 +1,11 @@
 import React, { Fragment, useEffect } from "react";
 import { Button } from "antd";
 import Link from "next/link";
+import QueueAnim from 'rc-queue-anim';
 
 import 'rc-banner-anim/assets/index.css';
 import TweenOne from 'rc-tween-one';
-import BannerAnim, { Element } from 'rc-banner-anim';
+import BannerAnim, { Element , OverPack} from 'rc-banner-anim';
 import Texty from 'rc-texty';
 
 const BgElement = Element.BgElement;
@@ -38,7 +39,7 @@ const CarrouselBanner = ({ items }) => {
             }}
           />
           <div className='container banner'>
-          <TweenOne className="banner-user-title carousel__title" animation={{ y: 30, opacity: 0, type: 'from' }}>
+          <TweenOne className="banner-user-title carousel__title" animation={{ y: 30, opacity: 0, type: 'from', delay: 200 }}>
             {component.TituloBanner}
           </TweenOne>
           <Texty component={TweenOne}
@@ -47,9 +48,15 @@ const CarrouselBanner = ({ items }) => {
             animation={{ y: 30, opacity: 0, type: 'from', delay:10 }}
           ></Texty>
             <TweenOne className="banner-user-text carousel__description" 
-            animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
+            animation={{ y: 30, opacity: 0, type: 'from', delay: 400 }}
           > {component.Descripcion}</TweenOne>
-           <Button className='carousel__btn-carousel'><Link href={component.Enlace}>{component.TituloBoton}</Link></Button>
+            <TweenOne 
+            animation={{ y: 30, opacity: 0, type: 'from', delay: 500 }}
+            align='left'
+          > 
+                   <Button className='carousel__btn-carousel'><Link href={component.Enlace}>{component.TituloBoton}</Link></Button>
+
+                   </TweenOne>
        
             </div>
          
