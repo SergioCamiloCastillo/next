@@ -5,30 +5,31 @@ import { BASE_PATH } from "../utils/constants";
 import AppContext from "../context/AppContext";
 
 
-const API = `${BASE_PATH}/home-carrousel-banners`;
+const APIBANNERCARROUSEL = `${BASE_PATH}/home-carrousel-banners`;
+const APINUESTROSSERVICIOS = `${BASE_PATH}/nuestros-servicios`;
 
 function ContextWrapper({ children }) {
     const [state, setState] = useState([]);
-    const [posts, setPosts] = useState([]);
+    const [nuestrosServicios, setNuestrosServicios] = useState([]);
 
 
     useEffect(async () => {
 
-        /*Get data*/
-        const response = await fetch(API);
+        /*Get data Banner Carrousel*/
+        const response = await fetch(APIBANNERCARROUSEL);
         const json = await response.json();
         setState(json);
 
+        /*Get data Our Services*/
+        const responseNuestrosServicios = await fetch(APINUESTROSSERVICIOS);
+        const jsonNuestrosServicios = await responseNuestrosServicios.json();
+        setNuestrosServicios(jsonNuestrosServicios);
 
-        const response3 = await fetch(API);
-        const json3 = await response3.json();
-        setPosts(json3);
 
     }, []);
 
-
     return (
-        <AppContext.Provider value={{ state, posts }}>
+        <AppContext.Provider value={{ state, nuestrosServicios }}>
             {children}
         </AppContext.Provider>
     );

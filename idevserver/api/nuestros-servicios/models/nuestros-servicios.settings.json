@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "home_carrousel_banners",
+  "collectionName": "nuestros_servicios",
   "info": {
-    "name": "Home Carrousel Banner"
+    "name": "Nuestros Servicios"
   },
   "options": {
     "increments": true,
@@ -11,13 +11,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "TituloBanner": {
+    "Titulo": {
       "type": "string"
     },
-    "Descripcion": {
-      "type": "richtext"
-    },
-    "Imagen": {
+    "Icono": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -29,14 +26,8 @@
       "required": false,
       "pluginOptions": {}
     },
-    "StatusActivo": {
-      "type": "boolean"
-    },
-    "TituloBoton": {
-      "type": "string"
-    },
-    "Enlace": {
-      "type": "string"
+    "Descripcion": {
+      "type": "richtext"
     }
   }
 }

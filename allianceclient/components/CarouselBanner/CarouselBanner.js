@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from "react";
 import { Button } from "antd";
 import Link from "next/link";
-import QueueAnim from 'rc-queue-anim';
+
 
 import 'rc-banner-anim/assets/index.css';
 import TweenOne from 'rc-tween-one';
@@ -39,6 +39,7 @@ const CarrouselBanner = ({ items }) => {
             }}
           />
           <div className='container banner'>
+          
           <TweenOne className="banner-user-title carousel__title" animation={{ y: 30, opacity: 0, type: 'from', delay: 200 }}>
             {component.TituloBanner}
           </TweenOne>
