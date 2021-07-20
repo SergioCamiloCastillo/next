@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_logodescripcion_logo_descripcion_porque_escogernos",
+  "info": {
+    "name": "LogoDescripcionPorqueEscogernos",
+    "icon": "question"
+  },
+  "options": {},
+  "attributes": {
+    "TituloLogo": {
+      "type": "string"
+    },
+    "Logo": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

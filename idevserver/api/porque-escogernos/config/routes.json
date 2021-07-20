@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/porque-escogernos",
+      "handler": "porque-escogernos.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/porque-escogernos/count",
+      "handler": "porque-escogernos.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/porque-escogernos/:id",
+      "handler": "porque-escogernos.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/porque-escogernos",
+      "handler": "porque-escogernos.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/porque-escogernos/:id",
+      "handler": "porque-escogernos.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/porque-escogernos/:id",
+      "handler": "porque-escogernos.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

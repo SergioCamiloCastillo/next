@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "porque_escogernos_s",
+  "info": {
+    "name": "¿Por que Escogernos?"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "richtext"
+    },
+    "LogoDescripcionPorqueEscogernos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "logodescripcion.logo-descripcion-porque-escogernos"
+    }
+  }
+}

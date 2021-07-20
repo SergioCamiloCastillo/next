@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/home-nuestros-servicios-titulo-descripcions",
+      "handler": "home-nuestros-servicios-titulo-descripcion.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/home-nuestros-servicios-titulo-descripcions/count",
+      "handler": "home-nuestros-servicios-titulo-descripcion.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/home-nuestros-servicios-titulo-descripcions/:id",
+      "handler": "home-nuestros-servicios-titulo-descripcion.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/home-nuestros-servicios-titulo-descripcions",
+      "handler": "home-nuestros-servicios-titulo-descripcion.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/home-nuestros-servicios-titulo-descripcions/:id",
+      "handler": "home-nuestros-servicios-titulo-descripcion.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/home-nuestros-servicios-titulo-descripcions/:id",
+      "handler": "home-nuestros-servicios-titulo-descripcion.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

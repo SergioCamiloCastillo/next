@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_nuestros_servicios_titulo_descripcion_s",
+  "info": {
+    "name": "Home Nuestros Servicios (Titulo - Descripcion)"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "text"
+    }
+  }
+}

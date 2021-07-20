@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import { Fragment } from "react";
 import { Button } from "antd";
 import Link from "next/link";
 
