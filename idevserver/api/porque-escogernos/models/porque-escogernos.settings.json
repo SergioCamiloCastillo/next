@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "porque_escogernos_s",
   "info": {
-    "name": "¿Por que Escogernos?"
+    "name": "¿Por que Escogernos?",
+    "description": ""
   },
   "options": {
     "increments": true,

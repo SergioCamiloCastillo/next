@@ -26,7 +26,7 @@ const PorqueEscogernos = ({ items }) => {
                       : "Cargando..."}
                   </Row>
                 </Col>
-                <Col xs={24} sm={12} key={index} orientation="left">
+                <Col xs={24} sm={12} key={index}>
                   <h2>{item.Titulo}</h2>
                   <div
                     dangerouslySetInnerHTML={{
