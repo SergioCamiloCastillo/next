@@ -4,7 +4,6 @@ import Image from "next/image";
 
 
 const OurServices = ({ items }) => {
-  const style = { background: "#0092ff", padding: "8px 0" };
   const { API_URL } = process.env
 
   return (

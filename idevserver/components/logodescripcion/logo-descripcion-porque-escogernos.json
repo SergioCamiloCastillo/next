@@ -2,7 +2,8 @@
   "collectionName": "components_logodescripcion_logo_descripcion_porque_escogernos",
   "info": {
     "name": "LogoDescripcionPorqueEscogernos",
-    "icon": "question"
+    "icon": "question",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -20,6 +21,9 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "Cantidad": {
+      "type": "biginteger"
     }
   }
 }

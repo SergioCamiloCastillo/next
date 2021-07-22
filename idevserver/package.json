@@ -11,6 +11,8 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^29.0.0",
+    "@ckeditor/ckeditor5-react": "^3.0.2",
     "knex": "0.21.18",
     "mysql": "2.18.1",
     "strapi": "3.6.5",
