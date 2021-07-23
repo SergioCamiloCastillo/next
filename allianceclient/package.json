@@ -17,6 +17,7 @@
     "aos": "^2.3.4",
     "embla-carousel": "^4.5.3",
     "framer-motion": "^4.1.17",
+    "keen-slider": "^5.5.1",
     "next": "10.2.3",
     "nprogress": "^0.2.0",
     "rc-banner-anim": "^2.4.5",

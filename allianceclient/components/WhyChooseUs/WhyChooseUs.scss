@@ -1,32 +1,44 @@
-.why-choose-us{
-    margin-top: 60px;
-    h2{
-        position: relative;
-       
-        color: #151c4c;
-        font-size: 30px;
-        line-height: 47px;
-        font-weight: 600;
-       
+.why-choose-us {
+  margin-top: 60px;
+  &__logos-description {
+    .ant-row {
+      padding: 35px;
     }
-    p{
-       
-        color: #677294;
-        font-size: 16px;
-        line-height: 31px;
-        font-weight: 400;
+    .ant-col {
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
-    ul{
-        margin-left: 5%;
-          
-        color: #677294;
-        font-size: 16px;
-        line-height: 31px;
-        font-weight: 400;
+    h3 {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 3px;
+      font-weight: 700;
     }
-    li{
-        list-style-image: url('/images/check-solid.svg');
-        line-height: 40px;
-       
-    }
+  }
+  h2 {
+    position: relative;
+
+    color: #151c4c;
+    font-size: 30px;
+    line-height: 47px;
+    font-weight: 600;
+  }
+  p {
+    color: #677294;
+    font-size: 16px;
+    line-height: 31px;
+    font-weight: 400;
+  }
+  ul {
+    margin-left: 5%;
+
+    color: #677294;
+    font-size: 16px;
+    line-height: 31px;
+    font-weight: 400;
+  }
+  li {
+    list-style-image: url("/images/check-solid.svg");
+    line-height: 40px;
+  }
 }

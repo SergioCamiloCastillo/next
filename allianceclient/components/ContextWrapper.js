@@ -9,6 +9,7 @@ const APIBANNERCARROUSEL = `${BASE_PATH}/home-carrousel-banners`;
 const APINUESTROSSERVICIOS = `${BASE_PATH}/nuestros-servicios`;
 const APITITULONUESTROSSERVICIOS = `${BASE_PATH}/home-nuestros-servicios-titulo-descripcions`;
 const APIPORQUEESCOGERNOS = `${BASE_PATH}/porque-escogernos`;
+const APITECNOLOGIAS = `${BASE_PATH}/tecnologias`;
 
 
 function ContextWrapper({ children }) {
@@ -16,6 +17,7 @@ function ContextWrapper({ children }) {
     const [tituloNuestrosServicios, setTituloNuestrosServicios] = useState([]);
     const [porqueEscogernos, setPorqueEscogernos] = useState([]);
     const [nuestrosServicios, setNuestrosServicios] = useState([]);
+    const [tecnologias, setTecnologias] = useState([]);
 
 
     useEffect(async () => {
@@ -40,10 +42,15 @@ function ContextWrapper({ children }) {
         const jsonPorqueEscogernos= await responsePorqueEscogernos.json();
         setPorqueEscogernos(jsonPorqueEscogernos);
 
+        /*Get data Tecnologies*/
+        const responseTecnologias = await fetch(APITECNOLOGIAS);
+        const jsonTecnologias= await responseTecnologias.json();
+        setTecnologias(jsonTecnologias);
+
     }, []);
 
     return (
-        <AppContext.Provider value={{ state, nuestrosServicios,tituloNuestrosServicios, porqueEscogernos  }}>
+        <AppContext.Provider value={{tecnologias, state, nuestrosServicios,tituloNuestrosServicios, porqueEscogernos }}>
             {children}
         </AppContext.Provider>
     );

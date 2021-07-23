@@ -8,10 +8,10 @@ import HomeContainer from "@/containers/HomeContainer";
 
 
 const Home = () => {
-  const { state, nuestrosServicios, tituloNuestrosServicios, porqueEscogernos } = useContext(AppContext);
+  const { state, nuestrosServicios, tituloNuestrosServicios, porqueEscogernos, tecnologias } = useContext(AppContext);
 
   return (
-    <HomeContainer porqueEscogernos={porqueEscogernos} data={state} nuestrosServicios={ nuestrosServicios } tituloNuestrosServicios={tituloNuestrosServicios} />
+    <HomeContainer tecnologias={tecnologias} porqueEscogernos={porqueEscogernos} data={state} nuestrosServicios={ nuestrosServicios } tituloNuestrosServicios={tituloNuestrosServicios} />
 
   )
 }

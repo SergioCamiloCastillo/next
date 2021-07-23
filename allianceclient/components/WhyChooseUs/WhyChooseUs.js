@@ -11,7 +11,7 @@ const PorqueEscogernos = ({ items }) => {
         {items
           ? items.map((item, index) => (
               <Fragment>
-                <Col xs={24} sm={12} key={index}>
+                <Col className='why-choose-us__logos-description text-center' xs={24} sm={12} key={index}>
                   <Row>
                     {item.LogoDescripcionPorqueEscogernos
                       ? item.LogoDescripcionPorqueEscogernos.map(
