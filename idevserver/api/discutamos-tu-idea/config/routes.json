@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/discutamos-tu-ideas",
+      "handler": "discutamos-tu-idea.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/discutamos-tu-ideas/count",
+      "handler": "discutamos-tu-idea.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/discutamos-tu-ideas/:id",
+      "handler": "discutamos-tu-idea.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/discutamos-tu-ideas",
+      "handler": "discutamos-tu-idea.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/discutamos-tu-ideas/:id",
+      "handler": "discutamos-tu-idea.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/discutamos-tu-ideas/:id",
+      "handler": "discutamos-tu-idea.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

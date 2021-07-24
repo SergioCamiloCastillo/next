@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discutamos_tu_ideas",
+  "info": {
+    "name": "Discutamos tu idea",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "text"
+    },
+    "BotonTitulo": {
+      "type": "string"
+    },
+    "BotonEnlace": {
+      "type": "string"
+    },
+    "ImagenFondo": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

@@ -10,6 +10,7 @@ const APINUESTROSSERVICIOS = `${BASE_PATH}/nuestros-servicios`;
 const APITITULONUESTROSSERVICIOS = `${BASE_PATH}/home-nuestros-servicios-titulo-descripcions`;
 const APIPORQUEESCOGERNOS = `${BASE_PATH}/porque-escogernos`;
 const APITECNOLOGIAS = `${BASE_PATH}/tecnologias`;
+const APIDISCUTAMOS = `${BASE_PATH}/discutamos-tu-ideas`;
 
 
 function ContextWrapper({ children }) {
@@ -18,6 +19,7 @@ function ContextWrapper({ children }) {
     const [porqueEscogernos, setPorqueEscogernos] = useState([]);
     const [nuestrosServicios, setNuestrosServicios] = useState([]);
     const [tecnologias, setTecnologias] = useState([]);
+    const [discutamos, setDiscutamos] = useState([]);
 
 
     useEffect(async () => {
@@ -47,10 +49,15 @@ function ContextWrapper({ children }) {
         const jsonTecnologias= await responseTecnologias.json();
         setTecnologias(jsonTecnologias);
 
+         /*Get data Discutamos tus ideas*/
+         const responseDiscutamos = await fetch(APIDISCUTAMOS);
+         const jsonDiscutamos= await responseDiscutamos.json();
+         setDiscutamos(jsonDiscutamos);
+
     }, []);
 
     return (
-        <AppContext.Provider value={{tecnologias, state, nuestrosServicios,tituloNuestrosServicios, porqueEscogernos }}>
+        <AppContext.Provider value={{discutamos, tecnologias, state, nuestrosServicios,tituloNuestrosServicios, porqueEscogernos }}>
             {children}
         </AppContext.Provider>
     );

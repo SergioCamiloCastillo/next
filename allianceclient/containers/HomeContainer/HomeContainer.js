@@ -4,7 +4,9 @@ import TitleDescriptionOurServices from "@/components/TitlesDescriptions/Nuestro
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Tecnologies from "@/components/Tecnologies";
 import OurServices from "@/components/OurServices";
-const HomeContainer = ({ nuestrosServicios, data, tituloNuestrosServicios, porqueEscogernos, tecnologias }) => {
+import DiscutamosTuIdea from "@/components/DiscutamosTuIdea";
+
+const HomeContainer = ({ discutamos, nuestrosServicios, data, tituloNuestrosServicios, porqueEscogernos, tecnologias }) => {
   return (
     <>
     <div>
@@ -13,6 +15,7 @@ const HomeContainer = ({ nuestrosServicios, data, tituloNuestrosServicios, porqu
       <OurServices items={nuestrosServicios} />
       <WhyChooseUs items={porqueEscogernos} />
       <Tecnologies items={tecnologias} />
+      <DiscutamosTuIdea items={discutamos}/>
     </div>
     </>
   );
