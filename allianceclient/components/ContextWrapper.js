@@ -11,6 +11,8 @@ const APITITULONUESTROSSERVICIOS = `${BASE_PATH}/home-nuestros-servicios-titulo-
 const APIPORQUEESCOGERNOS = `${BASE_PATH}/porque-escogernos`;
 const APITECNOLOGIAS = `${BASE_PATH}/tecnologias`;
 const APIDISCUTAMOS = `${BASE_PATH}/discutamos-tu-ideas`;
+const APIPRECIOS = `${BASE_PATH}/precios`;
+const APICONTACTO = `${BASE_PATH}/contactos`;
 
 
 function ContextWrapper({ children }) {
@@ -20,6 +22,8 @@ function ContextWrapper({ children }) {
     const [nuestrosServicios, setNuestrosServicios] = useState([]);
     const [tecnologias, setTecnologias] = useState([]);
     const [discutamos, setDiscutamos] = useState([]);
+    const [precios, setPrecios] = useState([]);
+    const [contacto, setContacto] = useState([]);
 
 
     useEffect(async () => {
@@ -54,10 +58,19 @@ function ContextWrapper({ children }) {
          const jsonDiscutamos= await responseDiscutamos.json();
          setDiscutamos(jsonDiscutamos);
 
+          /*Get data Precios*/
+          const responsePrecios = await fetch(APIPRECIOS);
+          const jsonPrecios= await responsePrecios.json();
+          setPrecios(jsonPrecios);
+          /*Get data Contacto*/
+          const responseContacto = await fetch(APICONTACTO);
+          const jsonContacto= await responseContacto.json();
+          setContacto(jsonContacto);
+
     }, []);
 
     return (
-        <AppContext.Provider value={{discutamos, tecnologias, state, nuestrosServicios,tituloNuestrosServicios, porqueEscogernos }}>
+        <AppContext.Provider value={{contacto, discutamos, precios, tecnologias, state, nuestrosServicios,tituloNuestrosServicios, porqueEscogernos }}>
             {children}
         </AppContext.Provider>
     );

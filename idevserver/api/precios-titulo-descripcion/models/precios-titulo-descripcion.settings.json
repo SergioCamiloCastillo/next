@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "precios_titulo_descripcion_s",
+  "info": {
+    "name": "Precios (Título - Descripción)"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "richtext"
+    }
+  }
+}

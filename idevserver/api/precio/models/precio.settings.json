@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "precios",
+  "info": {
+    "name": "precio"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TituloServicio": {
+      "type": "string"
+    },
+    "DescripcionServicio": {
+      "type": "text"
+    },
+    "Precio": {
+      "type": "biginteger"
+    },
+    "MultipleItems": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/precios-titulo-descripcions",
+      "handler": "precios-titulo-descripcion.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/precios-titulo-descripcions/count",
+      "handler": "precios-titulo-descripcion.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/precios-titulo-descripcions/:id",
+      "handler": "precios-titulo-descripcion.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/precios-titulo-descripcions",
+      "handler": "precios-titulo-descripcion.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/precios-titulo-descripcions/:id",
+      "handler": "precios-titulo-descripcion.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/precios-titulo-descripcions/:id",
+      "handler": "precios-titulo-descripcion.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

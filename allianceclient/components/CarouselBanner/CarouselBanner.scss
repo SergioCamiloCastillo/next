@@ -1,5 +1,13 @@
 .carousel{
-  
+  p{
+    min-width: 930px;
+    max-width: 930px;
+    font-size: 22px;
+    line-height: 35px;
+    text-align: left;
+    font-weight: 300;
+    margin-top: 3%;
+  }
   &__title{
     font-size: 75px;
     font-weight: 300;
@@ -40,6 +48,10 @@
     
   }
   &__description{
+    p{
+      font-size: 22px;
+
+    }
     min-width: 930px;
     max-width: 930px;
     font-size: 22px;

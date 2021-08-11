@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "nuestros_servicios",
+  "collectionName": "contactos",
   "info": {
-    "name": "Nuestros Servicios",
-    "description": ""
+    "name": "Contacto"
   },
   "options": {
     "increments": true,
@@ -12,10 +11,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Titulo": {
+    "TituloContacto": {
       "type": "string"
     },
-    "Icono": {
+    "Descripcion": {
+      "type": "richtext"
+    },
+    "Imagen": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -26,9 +28,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "Descripcion": {
-      "type": "string"
     }
   }
 }

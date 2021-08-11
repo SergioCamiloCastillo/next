@@ -7,34 +7,36 @@ const DiscutamosTuIdea = ({ items }) => {
       {items
         ? items.map((item, index) => (
             <div
-            key={index}
+              key={index}
               className="discutamos-tu-idea__contenedor"
               style={{
                 backgroundImage: `url(http://localhost:1337${item.ImagenFondo[0].url})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center top",
-                height:"240px",
-                backgroundColor:"#A63374"
+                height: "240px",
+                backgroundColor: "#A63374",
               }}
             >
-                <div className="container">
+              <div className="container">
                 <Row gutter={[40, 40]}>
-                <Col xs={0} sm={2} key={index}></Col>
-                    <Col xs={12} sm={14} key={index}>
+                  <Col xs={0} sm={2} key={index}></Col>
+                  <Col xs={24} sm={14} key={index}>
                     <h3>{item.Titulo}</h3>
                     <p>{item.Descripcion}</p>
-                    </Col>
-                    <Col xs={12} sm={6} key={index} className='discutamos-tu-idea__col-right'>
-                    <Button><Link href={item.BotonEnlace}>{item.BotonTitulo}</Link></Button>
-
-                    </Col>
-                    <Col xs={0} sm={2} key={index}></Col>
-
-
+                  </Col>
+                  <Col
+                    xs={24}
+                    sm={6}
+                    key={index}
+                    className="discutamos-tu-idea__col-right"
+                  >
+                    <Button>
+                      <Link href={item.BotonEnlace}>{item.BotonTitulo}</Link>
+                    </Button>
+                  </Col>
+                  <Col xs={0} sm={2} key={index}></Col>
                 </Row>
-                   
-                </div>
-
+              </div>
             </div>
           ))
         : "Cargando..."}

@@ -11,7 +11,7 @@ const Tecnologies = ({ items }) => {
 
   return (
     <Fragment>
-      <div class='container carousel-tecnologies'>
+      <div className='container carousel-tecnologies'>
       <Swiper
       
       autoplay={{
