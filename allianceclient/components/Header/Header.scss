@@ -22,7 +22,7 @@ header {
   transition: 0.5s;
 
   &__logo {
-    width: 118px;
+    width: 260px;
   }
   .sub-menu-parent:hover a:first-child::before {
     width: 60% !important;
@@ -391,6 +391,17 @@ nav > ul > li:first-child {
 }
 
 @media screen and (max-width: 960px) {
+  .spacing-80{
+    display:none;
+  }
+  .ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper{
+    width: 100% !important;
+  }
+  .sub-menu-parent svg{
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+  }
   .navbar.active a {
     color: white !important;
     font: 400 14px/30px "Poppins", sans-serif;

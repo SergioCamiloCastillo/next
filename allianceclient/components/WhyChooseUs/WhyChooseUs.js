@@ -1,8 +1,10 @@
 import { Fragment } from "react";
 import { Row, Col } from "antd";
 import Image from "next/image";
+import CountUp from "react-countup";
 
 const PorqueEscogernos = ({ items }) => {
+  
   const { API_URL } = process.env;
 
   return (
@@ -18,7 +20,7 @@ const PorqueEscogernos = ({ items }) => {
                           (logos, indexlogos) => (
                             <Col xs={24} sm={12}>
                               <Image src={API_URL + logos.Logo[0].url} width={50} height={50} />
-                              <h3>{logos.Cantidad}</h3>
+                              <h3><CountUp duration={2} end={logos.Cantidad}></CountUp></h3>
                               <p>{logos.TituloLogo}</p>
                             </Col>
                           )

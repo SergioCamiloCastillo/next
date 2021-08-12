@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Drawer, Button, Avatar } from "antd";
 import React, { useState, useEffect } from "react";
 
-import Image from "next/image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -46,10 +45,10 @@ export default function Header() {
               width={80}
               height={60}
               className="navbar__logo"
-              src="/images/logooscuro.png"
+              src={navbar ? "/images/logooscuro.png" : "/images/logoblanco.png"} 
             />
           </Link>
-          <div className="menu-icon vertical-center" onClick={handleClick}>
+          <div className="menu-icon vertical-center" onClick={handleClick} style={{color : navbar ? "#151c4c" : "#fff" , border: navbar ? "2px solid #151c4c" : "2px solid #fff" }} >
             <FontAwesomeIcon icon={click ? faTimes : faBars}></FontAwesomeIcon>
           </div>
           <div className={click ? "nav-menu active" : "nav-menu"}>
@@ -139,7 +138,7 @@ export default function Header() {
                   <Link href="/" className="navbar-logo">
                     <img
                       width={80}
-                      height={60}
+                      height={65}
                       className="navbar__logo"
                       src="/images/logooscuro.png"
                     />

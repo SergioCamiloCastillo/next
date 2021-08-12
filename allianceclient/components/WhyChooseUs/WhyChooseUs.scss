@@ -1,6 +1,9 @@
 .why-choose-us {
   margin-top: 60px;
   &__logos-description {
+  
+      
+    
     .ant-row {
       padding: 35px;
     }
@@ -40,5 +43,15 @@
   li {
     list-style-image: url("/images/check-solid.svg");
     line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  
+  .why-choose-us{
+    margin-top: 0;
+  }
+  .why-choose-us__logos-description .ant-row{
+    padding: 10px;
   }
 }
