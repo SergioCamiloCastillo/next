@@ -5,7 +5,7 @@ import { BASE_PATH } from "../utils/constants";
 import AppContext from "../context/AppContext";
 
 
-const APIBANNERCARROUSEL = `${BASE_PATH}/home-carrousel-banners`;
+const APIBANNERCARROUSEL = `http://142.93.123.131/home-carrousel-banners`;
 const APINUESTROSSERVICIOS = `${BASE_PATH}/nuestros-servicios`;
 const APITITULONUESTROSSERVICIOS = `${BASE_PATH}/home-nuestros-servicios-titulo-descripcions`;
 const APIPORQUEESCOGERNOS = `${BASE_PATH}/porque-escogernos`;
