@@ -24,7 +24,6 @@ export default function MyApp(props) {
     <>
  <Head>
         <title>Atomicos - Desarrollo Web</title>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
         <meta
           name="description"
