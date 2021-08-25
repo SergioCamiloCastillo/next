@@ -35,7 +35,7 @@ const CarrouselBanner = ({ items }) => {
                     key="bg"
                     className="bg"
                     style={{
-                      backgroundImage: `url(http://142.93.123.131${component.Imagen[0].url})`,
+                      backgroundImage: `url(https://idevcol.com${component.Imagen[0].url})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }}
