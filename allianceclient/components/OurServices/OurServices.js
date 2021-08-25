@@ -21,7 +21,7 @@ const OurServices = ({ items }) => {
 
                     <Image src={API_URL + item.Icono[0].url} width={70} height={70} />
 
-                    <h4 className="our-services__title">{item.Titulo}</h4>
+                    <h4 className="our-services__title">{item.Titulo}{item.Icono[0].url}</h4>
                     <p className="our-services__description">{item.Descripcion}</p>
                   </div>
                 </Col>
