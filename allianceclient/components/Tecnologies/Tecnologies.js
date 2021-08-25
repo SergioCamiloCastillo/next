@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
+import { BASE_PATH } from "../utils/constants";
 
 import Image from "next/image";
 import SwiperCore, { Autoplay } from "swiper/core";
@@ -45,7 +46,7 @@ const Tecnologies = ({ items }) => {
           {items
             ? items.map((item, index) => (
 
-        <SwiperSlide className='carousel-tecnologies__item'><Image src={API_URL + item.Logo[0].url}  width={70} height={50}></Image></SwiperSlide>
+        <SwiperSlide className='carousel-tecnologies__item'><Image src= `${BASE_PATH}${item.Logo[0].url}`  width={70} height={50}></Image></SwiperSlide>
         ))
         : "Cargando..."}
       </Swiper>
