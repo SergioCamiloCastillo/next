@@ -10,7 +10,7 @@ const DiscutamosTuIdea = ({ items }) => {
               key={index}
               className="discutamos-tu-idea__contenedor"
               style={{
-                backgroundImage: `url(http://localhost:1337${item.ImagenFondo[0].url})`,
+                backgroundImage: `url(https://idevcol.com${item.ImagenFondo[0].url})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center top",
                 height: "240px",
