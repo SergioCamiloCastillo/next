@@ -4,7 +4,7 @@ import Image from "next/image";
 
 
 const OurServices = ({ items }) => {
-  const { API_URL } = process.env
+  const { API_URL } = 'https://idevcol.com';
 
   return (
     <Fragment>
