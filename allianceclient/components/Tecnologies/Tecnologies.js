@@ -46,7 +46,7 @@ const Tecnologies = ({ items }) => {
           {items
             ? items.map((item, index) => (
 
-        <SwiperSlide className='carousel-tecnologies__item'><Image src= `${BASE_PATH}${item.Logo[0].url}`  width={70} height={50}></Image></SwiperSlide>
+        <SwiperSlide className='carousel-tecnologies__item'><Image src=`https://idevcol.com${item.Logo[0].url}`  width={70} height={50}></Image></SwiperSlide>
         ))
         : "Cargando..."}
       </Swiper>
