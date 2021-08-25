@@ -1,14 +1,13 @@
 import { Fragment } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
-import { BASE_PATH } from "../utils/constants";
 
 import Image from "next/image";
 import SwiperCore, { Autoplay } from "swiper/core";
 SwiperCore.use([Autoplay]);
 
 const Tecnologies = ({ items }) => {
-  const API_URL = "https://www.idevcol.com";
+  const { API_URL } = process.env;
 
   return (
     <Fragment>
