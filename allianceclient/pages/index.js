@@ -23,10 +23,10 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Atomicos - Desarrollo Web</title>
+        <title>IngenioCode - Desarrollo Web</title>
         <meta
           name="description"
-          content="Somos una empresa dedicada al desarrollo de sitios web."
+          content="Somos IngenioCode, una empresa dedicada al desarrollo de sitios web."
         />
         <meta
           property="og:title"
