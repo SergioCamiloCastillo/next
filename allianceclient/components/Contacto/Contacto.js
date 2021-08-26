@@ -2,7 +2,7 @@ import { Row, Col } from "antd";
 import Image from "next/image";
 import FormularioContacto from "../FormularioContacto";
 const Contacto = ({ items }) => {
-  const { API_URL } = process.env;
+  const API_URL  = 'https://idevcol.com';
 
   return (
     <div className="container contact" id='contacto'>
