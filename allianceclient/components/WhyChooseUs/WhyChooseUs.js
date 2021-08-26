@@ -5,7 +5,7 @@ import CountUp from "react-countup";
 
 const PorqueEscogernos = ({ items }) => {
   
-  const { API_URL } = process.env;
+  const API_URL  = 'https://idevcol.com';
 
   return (
     <div className="why-choose-us container">
