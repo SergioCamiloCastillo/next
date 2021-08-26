@@ -7,7 +7,7 @@ import SwiperCore, { Autoplay } from "swiper/core";
 SwiperCore.use([Autoplay]);
 
 const Tecnologies = ({ items }) => {
-  const urlcompleta = "https://www.idevcol.com";
+  const API_URL  = 'https://idevcol.com';
 
   return (
     <Fragment>
@@ -41,7 +41,7 @@ const Tecnologies = ({ items }) => {
             ? items.map((item, index) => (
                 <SwiperSlide className="carousel-tecnologies__item">
                   <Image
-                    src={urlcompleta + item.Logo[0].url}
+                    src={API_URL + item.Logo[0].url}
                     width={70}
                     height={50}
                   ></Image>
