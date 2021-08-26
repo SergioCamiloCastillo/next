@@ -23,8 +23,8 @@ export default function MyApp(props) {
   return (
     <>
  <Head>
-        <title>Atomicos - Desarrollo Web</title>
-
+        <title>Ingeniocode - Desarrollo Web</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" key="viewport" />
         <meta
           name="description"
           content="Somos una empresa dedicada al desarrollo de sitios web."
