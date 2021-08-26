@@ -27,7 +27,7 @@ export default function MyApp(props) {
 <meta name="viewport" content="width=device-width, initial-scale=1" key="viewport" />
         <meta
           name="description"
-          content="Somos una empresa dedicada al desarrollo de sitios web."
+          content="Somos IngenioCode una empresa dedicada al desarrollo de sitios web."
         />
         <meta
           property="og:title"
