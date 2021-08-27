@@ -13,7 +13,6 @@ import Layout from "@/components/Layout";
 import "../styles/globals.css";
 import 'antd/dist/antd.css';
 import "@fortawesome/fontawesome-svg-core/styles.css";
-
 import Head from "next/head";
 
 export default function MyApp(props) {
