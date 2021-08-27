@@ -1,13 +1,37 @@
-const { SitemapStream, streamToPromise } = require( 'sitemap' )
-  const { Readable } = require( 'stream' )
+const { SitemapStream, streamToPromise } = require("sitemap");
+const { Readable } = require("stream");
 
-  // An array with your links
-  const links = [{ url: '/',  changefreq: 'daily', priority: 0.3  },{ url: '/about',  changefreq: 'daily', priority: 0.3  }]
+export default async (req, res) => {
+  try {
+    // An array with your links
+   
 
-  // Create a stream to write to
-  const stream = new SitemapStream( { hostname: 'https://ingeniocode.com' } )
+    // Add other pages
+    const pages = ["/",  "/about""];
+    pages.map((url) => {
+      links.push({
+        url,
+        changefreq: "daily",
+        priority: 0.9,
+      });
+    });
 
-  // Return a promise that resolves with your XML string
-  return streamToPromise(Readable.from(links).pipe(stream)).then((data) =>
-    data.toString()
-  )
+    // Create a stream to write to
+    const stream = new SitemapStream({
+      hostname: `https://ingeniocode.com`,
+    });
+
+    res.writeHead(200, {
+      "Content-Type": "application/xml",
+    });
+
+    const xmlString = await streamToPromise(
+      Readable.from(links).pipe(stream)
+    ).then((data) => data.toString());
+
+    res.end(xmlString);
+  } catch (e) {
+    console.log(e);
+    res.send(JSON.stringify(e));
+  }
+};
