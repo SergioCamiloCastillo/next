@@ -41,14 +41,14 @@ export default function MyApp(props) {
         <meta property="og:type" content="website" />
    <script
     async
-    src="https://www.googletagmanager.com/gtag/js?id=%your code here%" >
+    src="https://www.googletagmanager.com/gtag/js?id=G-NHE0E3CM0K" >
 </script>
 <script dangerouslySetInnerHTML={
     { __html: `
         window.dataLayer = window.dataLayer || [];
         function gtag(){window.dataLayer.push(arguments)}
         gtag("js", new Date());
-        gtag("config", "<%your code here%>");
+        gtag("config", "G-NHE0E3CM0K");
     `}
 }>
 </script>
