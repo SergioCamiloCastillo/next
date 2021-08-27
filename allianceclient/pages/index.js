@@ -39,14 +39,7 @@ const Home = () => {
         />
         <meta property="og:url" content="https://snipcart.com/" />
         <meta property="og:type" content="website" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S27KV12FCC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-S27KV12FCC');
-</script>
+   
       </Head>
       <HomeContainer
         contacto={contacto}
