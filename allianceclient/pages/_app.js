@@ -39,6 +39,32 @@ export default function MyApp(props) {
         />
         <meta property="og:url" content="https://snipcart.com/" />
         <meta property="og:type" content="website" />
+    <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=206007953
+      />
+      <Script strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 206007953);
+        `}
+      </Script>
+    <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=%your code here%" >
+</script>
+<script dangerouslySetInnerHTML={
+    { __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments)}
+        gtag("js", new Date());
+        gtag("config", "<%your code here%>");
+    `}
+}>
+</script>
       </Head>
       <ContextWrapper>
         <Layout>
