@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ingeniocode.com/api/my-sitemap
+Sitemap: https://www.ingeniocode.com/sitemap.xml
