@@ -47,7 +47,7 @@ export default function MyApp(props) {
         window.dataLayer = window.dataLayer || [];
         function gtag(){window.dataLayer.push(arguments)}
         gtag("js", new Date());
-        gtag("config", "G-NHE0E3CM0K");
+        gtag("config", "G-YK3V02DL5Y");
     `}
 }>
 </script>
