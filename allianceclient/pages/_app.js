@@ -40,7 +40,7 @@ export default function MyApp(props) {
         <meta property="og:type" content="website" />
    <script
     async
-    src="https://www.googletagmanager.com/gtag/js?id=G-NHE0E3CM0K" >
+    src="https://www.googletagmanager.com/gtag/js?id=G-YK3V02DL5Y" >
 </script>
 <script dangerouslySetInnerHTML={
     { __html: `
